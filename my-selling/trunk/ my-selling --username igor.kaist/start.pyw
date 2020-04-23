@@ -14,7 +14,7 @@ root=Tk()
 
 
 sys.path.append('app/plugins/main')
-m=__import__('main')
+m =__import__('main')
 cl=getattr (m, 'App')(root)
 root.mainloop()
 

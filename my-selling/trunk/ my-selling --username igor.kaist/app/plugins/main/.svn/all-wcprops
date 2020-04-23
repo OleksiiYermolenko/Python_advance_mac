@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/16/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/settings.py
+END
+main_win.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/16/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/main_win.py
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/readme.txt
+END
+main.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/main.py
+END
+updates.py
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/9/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/updates.py
+END
+login_win.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/14/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/login_win.py
+END
+edit_log.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/edit_log.py
+END
+about_win.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/about_win.py
+END
+sync_win.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/%20my-selling%20--username%20igor.kaist/app/plugins/main/sync_win.py
+END

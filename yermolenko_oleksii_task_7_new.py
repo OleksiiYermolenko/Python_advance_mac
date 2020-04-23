@@ -1,33 +1,81 @@
-# 1 Дан файл с текстом, создать список из дат в тексте - даты в формате DD-MM-YYYY (02-03-1999)
-
-from re import findall, match
-
-# with open('yermolenko_oleksii_task_7.txt') as text:
-text_start = text.read()
-    # print(text_start)
-    list_data = []
-    found = match(r'\d\d-\d\d-\d{4}', text_start)
-    # while True:
-    #     list_data.append(found)
-    #     #
-    #     #
-    #     #
-    #     # print('Passed!!!')
-    # print(list_data)
-
-# 2 Пользователь вводит год в формате - YYYY (1999) Определить, является ли год високосным
+import requests
+import time
 
 
-# 3 Дан файл вывести сумму всех чисел в файле. Цифры могут быть не целыми и отрицательными
+# Домашнее задание 7
+# Добавлено: 26.03.2020 20:11
+# ДЗ 7
+# +1 Написать декоратор который будет выводить на экран время выполнения функции.
+
+def func_time_counter(func):
+    def wrapper():
+        start_time = time.time()
+        func()
+        finish_time = time.time()
+        print(f'Time: {finish_time - start_time} sec.')
+
+    return wrapper
 
 
-# 4 Написать генератор геометрической прогрессии
+@func_time_counter
+def time_req_webpage():
+    webpage = requests.get('https://ithillel.ua/')
+
+# time_req_webpage()
 
 
-# 5 Дан файл с текстом, удалить из файла все отрицательные числа, числа могут быть не целыми
+# +2 Сформировать убывающий массив из чисел, которые делятся на 3. Длину вводит пользователь
+# def decr_array(quantity):
+#     array = []
+#     for i in range(3, quantity * 3 + 1):
+#         if i % 3 == 0:
+#             array.append(i)
+#     array.reverse()
+#     print(array)
+#     return decr_array
+#
+#
+# try:
+#     quantity_of = int(input('Input quantity of decreasing array: '))
+#     decr_array(quantity_of)
+# except ValueError:
+#     print('Please input integer!!!')
 
 
-# 6 Дан файл с текстом, вывесли список который содержит все имена, все фамилии и все географические названия. Имена, Фамилии и Географические названии в простом формате, без дифисов.
+# +3 Написать декоратор skip который не выполняет функцию.
+# Декоратор может принимать параметр который выдаст функция вместо реального результата
+
+# ??? Есть-ли какой-то метод для функции с помощью которого можно
+# сделать проверку на наличие аргументов у функции
+#
+# def skip(func):
+#     def wrapper(*arg, **kwargs):
+#         print(*arg, **kwargs)
+#     return wrapper
+#
+#
+# @skip
+# def print_full_name(first_name, last_name):
+#     print(f"My name is", first_name, last_name)
+#
+#
+# # @skip
+# def time_req_webpage():
+#     webpage = requests.get('https://ithillel.ua/')
+
+#
+# print_full_name("Santa", "Clause")
+# time_req_webpage()
 
 
-# В этом и всех последующих ДЗ можно использовать все библиотеки которые доступны в Python
+# +4 Напишите генератор генерирующий последовательность треугольных чисел.
+
+# def all_triangle_numbers(quantity):
+#     number = 0
+#     while number < quantity:
+#         triangle_numbers = number * (number + 1) // 2
+#         yield triangle_numbers
+#         number += 1
+#
+# for n in all_triangle_numbers(20):
+#     print(n)

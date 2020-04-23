@@ -130,7 +130,7 @@ if __name__ == '__main__':
 	root = Tk()
 	date=StringVar()
 	def some_function(date): # эта функция будет вызываться при щелкании на дату...
-		print date
+		print (date)
 	# вводим дополнительный пераметр command
 	c = TkCalendar(root, year, month, date,command=some_function)
 	c.pack()

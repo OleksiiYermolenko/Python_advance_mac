@@ -5,6 +5,28 @@
 # поиска книги по какому-либо признаку (например, по автору или по году издания),
 # добавления книг в библиотеку, удаления книг из нее, сортировки книг по разным полям.
 
+import csv
+while True:
+    answer = input("Would you like to add, list or exit? ")
+    if answer == "add":
+        name = input("What is your name? ")
+        phone_number = input("Input you number? ")
+        with open("oleksii_yermolenko_task_21.csv", "a") as file:
+            file.write("\n" + name + "," + phone_number)
+            continue
+
+    elif answer == "list":
+        with open('oleksii_yermolenko_task_21.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                print(row)
+
+    elif answer == "exit":
+        print("Goodbye!")
+        break
+    else:
+        print("I'm sorry, that is not an option")
+
 
 class MyHomeLibrary:
     my_library = {}

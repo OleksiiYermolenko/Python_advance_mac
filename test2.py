@@ -1,68 +1,51 @@
-# Maze size
-N = 4
+# 6 Дан файл с текстом, вывесли список который содержит все имена,
+# все фамилии и все географические названия.
+# Имена, Фамилии и Географические названии в простом формате, без дифисов.
+import csv
+from re import findall
+import requests
+import urllib.request
+
+# def finder_all(file):
+#     numb_sum = 0
+#     with open(file) as text:
+#         text_start = text.read()
+#         text_found = findall(r"\d+\.\d+|-\d+\.\d+|\d+|-\d+", text_start)
+#         for item, elem in enumerate(text_found):
+#             text_found[item] = float(elem)
+#             numb_sum = numb_sum + text_found[item]
+#         print(text_found, numb_sum)
+#
+#
+# def csv_match():
+#     find = finder_all()
+#     pass
+
+# def reqest_surname(surname):
+#
+#     t = requests.get('https://ridni.org/karta/', params=surname)
+#     # t = urllib.request.urlopen('https://ridni.org/karta/' + surname)
+#
+#     # print ("result code: " + str(t.getcode()))
+#
+#     print(t)
+#
+#
+# reqest_surname('Пет')
+# #
+#
+# # В этом и всех последующих ДЗ можно использовать все библиотеки которые доступны в Python
+#
+# no_negative_number()
 
 
-# A utility function to print solution matrix sol
-def printSolution(sol):
-    for i in sol:
-        for j in i:
-            print(str(j) + " ", end="")
-        print("")
+from bs4 import BeautifulSoup
+import requests
+import urllib.request
+from urllib import urlopen
 
-    # A utility function to check if x, y is valid
+# import
+html_doc = urllib.request.urlopen('http://otus.ru').read()
 
-
-# index for N * N Maze
-def isSafe(maze, x, y):
-    if x >= 0 and x < N and y >= 0 and y < N and maze[x][y] == 1:
-        return True
-
-    return False
-
-def solveMaze(maze):
-    # Creating a 4 * 4 2-D list
-    sol = [[0 for j in range(4)] for i in range(4)]
-
-    if solveMazeUtil(maze, 0, 0, sol) == False:
-        print("Solution doesn't exist");
-        return False
-
-    printSolution(sol)
-    return True
-
-
-def solveMazeUtil(maze, x, y, sol):
-    # if (x, y is goal) return True
-    if x == N - 1 and y == N - 1:
-        sol[x][y] = 1
-        return True
-
-    # Check if maze[x][y] is valid
-    if isSafe(maze, x, y) == True:
-        # mark x, y as part of solution path
-        sol[x][y] = 1
-
-        # Move forward in x direction
-        if solveMazeUtil(maze, x + 1, y, sol) == True:
-            return True
-
-        # If moving in x direction doesn't give solution
-        # then Move down in y direction
-        if solveMazeUtil(maze, x, y + 1, sol) == True:
-            return True
-
-        # If none of the above movements work then
-        # BACKTRACK: unmark x, y as part of solution path
-        sol[x][y] = 0
-        return False
-
-
-# Driver program to test above function
-if __name__ == "__main__":
-    # Initialising the maze
-    maze = [[1, 0, 0, 0],
-            [1, 0, 0, 1],
-            [0, 1, 0, 0],
-            [1, 1, 1, 1]]
-
-    solveMaze(maze)
+soup = BeautifulSoup(html_doc)
+print(soup)

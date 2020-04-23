@@ -1,0 +1,29 @@
+# Домашнее задание 9
+# Добавлено: 02.04.2020 20:01
+# ДЗ 9
+# Описать класс «домашняя библиотека». Предусмотреть возможность работы с произвольным числом книг,
+# поиска книги по какому-либо признаку (например, по автору или по году издания),
+# добавления книг в библиотеку, удаления книг из нее, сортировки книг по разным полям.
+
+
+class MyHomeLibrary:
+    my_library = {}
+
+    def __init__(self, name, athor, year, libr_namb):
+        self.name = name
+        self.athor = athor
+        self.year = year
+        self.libr_numb = libr_namb
+
+    def add_book(self):
+        
+        pass
+
+    def find_book(self):
+        pass
+
+    def sort_book(self):
+        pass
+
+    def remove_book(self):
+        pass
